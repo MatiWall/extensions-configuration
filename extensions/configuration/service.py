@@ -2,7 +2,7 @@ import os
 import platform
 import uuid
 
-from .environment import _environment
+from .hosting_environment import _environment
 
 _system = os.environ.get('SYSTEM')
 _application = os.environ.get('APPLICATION')
@@ -20,7 +20,7 @@ def environment():
 def hostname():
     return _hostname
 
-def instance():
+def service_instance():
     return _instance
 
 def process_id():
