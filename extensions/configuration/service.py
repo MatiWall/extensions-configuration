@@ -2,6 +2,8 @@ import os
 import platform
 import uuid
 
+from .environment import _environment
+
 _system = os.environ.get('SYSTEM')
 _application = os.environ.get('APPLICATION')
 _deployable_unit = os.environ.get('DEPLOYABLE_UNIT')
@@ -12,6 +14,9 @@ _process_id = os.getpid()
 
 _service_version = os.environ.get('SERVICE_VERSION')
 
+
+def environment():
+    return _environment
 def hostname():
     return _hostname
 
