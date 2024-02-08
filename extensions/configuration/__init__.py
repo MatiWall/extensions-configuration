@@ -8,3 +8,5 @@ from .service import (
     service_instance,
     environment
 )
+
+from .config import make_dataclass_from_config, read_configs, read_configs_to_dataclass

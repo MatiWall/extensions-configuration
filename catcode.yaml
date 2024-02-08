@@ -1,0 +1,18 @@
+kind: Component
+metadata:
+  description: Configuration library used to read files from root.
+  git: https://github.com/MatiWall/extensions-configuration
+  lifecycle: Development
+  system: homelab
+  application: extensions
+  deployableUnit: configuration
+  owner: mw
+  tags:
+  - python
+  - package
+spec:
+  type: package
+  links:
+  - title: Telemetry
+    url: http://grafana.mw
+

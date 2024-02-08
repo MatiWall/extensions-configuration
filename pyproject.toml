@@ -4,13 +4,19 @@ version = "0.1.0"
 description = ""
 authors = ["Matias Wallenius <MatiWall@live.dk>"]
 readme = "README.md"
-
 packages = [
     {include  = "extensions/configuration"}
 ]
 
+[[tool.poetry.source]]
+name = "private"
+url = "http://pypi.mw"
+
+
+
 [tool.poetry.dependencies]
 python = "^3.11"
+pyyaml = "^6.0.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.4.4"
