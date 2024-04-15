@@ -5,9 +5,9 @@ from typing import Union, Any
 import yaml
 
 FILE_NAMES = [
-    'secrets.yaml', 'secrets.yaml',
-    'appconfig.Production.yml', 'appconfig.Production.yaml',
     'appconfig.yml', 'appconfig.yaml',
+    'appconfig.Production.yml', 'appconfig.Production.yaml',
+    'secrets.yaml', 'secrets.yaml',
 ]
 
 def read_configs_to_dataclass(path: Path = Path.cwd()):
