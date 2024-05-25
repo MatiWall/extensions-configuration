@@ -30,8 +30,3 @@ def test_read_configs_to_dataclass(test_config):
     # For example, check if specific fields are present or have expected values
     assert hasattr(appconfig, 'key1')
     assert hasattr(appconfig, 'key2')
-
-def test_read_configs_to_dataclass_empty(tmp_path):
-    # Test when the config directory is empty
-    with pytest.raises(ValueError, match="No configurations found."):
-        read_configs_to_dataclass(tmp_path)

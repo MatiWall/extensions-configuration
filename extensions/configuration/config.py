@@ -28,7 +28,7 @@ def read_configs(
 
     return config_data
 
-def make_dataclass_from_config(config: Union[list, tuple, dict], class_name: str = 'AppConfig'):
+def make_dataclass_from_config(config: dict, class_name: str = 'AppConfig'):
     fields_list = []
 
 
