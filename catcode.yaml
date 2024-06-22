@@ -1,5 +1,9 @@
 kind: Component
 metadata:
+  annotations:
+    catcode.io/catdocs-build: true
+    catcode.io/catdocs-build-docs-folder: true
+    catcode.io/catdocs-path: .
   description: Configuration library used to read files from root.
   git: https://github.com/MatiWall/extensions-configuration
   lifecycle: Development
