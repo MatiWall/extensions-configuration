@@ -7,7 +7,7 @@ metadata:
   description: Configuration library used to read files from root.
   git: https://github.com/MatiWall/extensions-configuration
   lifecycle: Development
-  system: homelab
+  system: packages
   application: extensions
   deployableUnit: configuration
   owner: mw
