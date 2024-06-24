@@ -10,12 +10,12 @@ metadata:
   system: packages
   application: extensions
   deployableUnit: configuration
-  owner: mw
   tags:
   - python
   - package
 spec:
   type: package
+  owner: mw
   links:
   - title: Telemetry
     url: http://grafana.mw
