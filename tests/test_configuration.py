@@ -1,3 +1,5 @@
+from dataclasses import dataclass
+
 import pytest
 from extensions.configuration import read_configs_to_dataclass
 
@@ -21,7 +23,13 @@ def test_config(tmp_path):
     return config_path
 
 def test_read_configs_to_dataclass(test_config):
-    appconfig = read_configs_to_dataclass(test_config)
+
+    @dataclass
+    class Config:
+        key1: str
+        key2: dict
+
+    appconfig = read_configs_to_dataclass(Config, test_config)
 
     # Ensure that the dataclass is created successfully
     assert appconfig is not None
