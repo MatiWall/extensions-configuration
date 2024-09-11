@@ -24,7 +24,7 @@ def read_configs(path: Path = Path.cwd()) -> Dict[str, Any]:
     dict
         Combined configuration data as a dictionary.
     """
-    config_data = {}
+    config_data: dict = {}
 
     for file_name in FILE_NAMES:
         file_path = path / file_name
@@ -39,7 +39,7 @@ def read_configs(path: Path = Path.cwd()) -> Dict[str, Any]:
 
     return config_data
 
-def read_configs_to_dataclass(klass: Type[dataclass], path: Path = Path.cwd()) -> dataclass:
+def read_configs_to_dataclass(klass: Any, path: Path = Path.cwd()) -> Any:
     """Construct a dataclass instance from configuration files.
 
     Parameters
@@ -58,7 +58,7 @@ def read_configs_to_dataclass(klass: Type[dataclass], path: Path = Path.cwd()) -
     config = read_configs(path)
     return make_dataclass_from_config(klass, config)
 
-def make_dataclass_from_config(klass: Type[dataclass], config: Dict[str, Any]) -> dataclass:
+def make_dataclass_from_config(klass: Any, config: Dict[str, Any]) -> Any:
     """Create a dataclass instance from a dictionary of configuration data.
 
     Parameters
